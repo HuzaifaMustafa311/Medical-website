@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hospital Website</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3762b2712e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+        }
+
+        #topbar {
+            background-color: rgb(64, 186, 190);
+            padding: 3px 3px;
+        }
+
+        #topbar .bi {
+            margin-right: 7px;
+            padding-bottom: 3px;
+        }
+
+        .navbar {
+            background: #f8f9fa;
+            margin-top: 30px;
+        }
+
+        .navbar-brand img {
+            height: 45px;
+            /* margin-left: 30px; */
+        }
+
+        .nav-link {
+            color: #626262;
+            font-size: 13px;
+            text-transform: uppercase;
+            padding: 10px 0 10px 30px;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: rgb(64, 186, 190);
+            font-weight: bolder;
+        }
+
+        .dropdown-menu {
+            background: #f8f9fa;
+        }
+
+        .dropdown-item:hover {
+            color: rgb(64, 186, 190);
+            font-weight: bolder;
+        }
+
+        .appointment-btn {
+            background-color: rgb(64, 186, 190);
+            text-decoration: none;
+            padding: 12px 30px;
+            margin-right: 70px;
+            border-radius: 4px;
+            color: white;
+
+        }
+
+        #fog {
+            background-color: rgb(246, 246, 250);
+            padding: 58px 11px;
+
+        }
+
+        .card-body i {
+            width: 100%;
+            color: rgb(64, 186, 190);
+            font-size: 50px;
+            padding: 16px 0px;
+        }
+
+        .card-body h5 {
+            font-weight: 700;
+        }
+
+        .card-body p {
+            line-height: 28px;
+            font-size: 15px;
+        }
+
+        .card {
+
+            border-radius: 10px;
+        }
+
+        #fog .card:hover {
+            background-color: rgb(98, 205, 209);
+            animation: 3s ease-in backInUp;
+            color: white;
+
+        }
+
+        #fog .card:hover .card-body i {
+            color: white;
+        }
+
+        .animate__backInUp {
+            animation: 3s ease-in-out 1s backInUp;
+        }
+
+        #help {
+            background-color: rgb(98, 205, 209);
+            height: auto;
+            text-align: center;
+            padding: 44px 46px;
+        }
+
+        #help h3 {
+            color: white;
+            font-weight: 600;
+        }
+
+        #help p {
+            color: white;
+        }
+
+        #help a {
+            background: transparent;
+            color: white;
+            font-weight: 600;
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        #help a:hover {
+            background: white;
+            color: rgb(98, 205, 209);
+            font-weight: 600;
+            border: 2px solid white;
+        }
+
+        #about-us {
+            padding: 46px 48px;
+        }
+
+        .aboutus h4 {
+            font-weight: 600;
+        }
+
+        .about-des {
+            font-style: italic;
+        }
+
+        .aboutus ul {
+            list-style: none;
+            padding: 0;
+            font-size: 17px;
+            color: #626262;
+        }
+
+        .aboutus p {
+            color: #626262;
+        }
+
+        .aboutus .bi {
+            color: rgb(98, 205, 209);
+            font-size: 19px;
+        }
+
+        #text p {
+            color: #626262;
+        }
+
+        .aboutus .items {
+            line-height: 3;
+        }
+
+        #text {
+            background: rgb(248, 248, 248);
+            text-align: center;
+            padding: 46px 48px;
+        }
+
+        #text h3 {
+            font-weight: 700;
+        }
+
+        #text h3:after {
+            content: " ";
+            width: 50px;
+            height: 3px;
+            position: absolute;
+            display: block;
+            left: calc(50% - 25px);
+            background: rgb(98, 205, 209);
+
+
+        }
+
+        #again-cards {
+            padding: 46px 48px;
+            background: rgb(241, 241, 241);
+        }
+
+        .format {}
+
+        .headd {
+            display: inline-flex;
+        }
+
+        .headd i {
+            padding: 7px 21px 0px 0px;
+            font-size: 33px;
+        }
+
+        .headd h1 {
+            font-weight: 600;
+            color: #626262;
+
+        }
+
+        .card-body .para {
+            padding: 8px 0px;
+            color: #626262;
+        }
+
+        .card-body .lanch {
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            color: #626262;
+        }
+
+        .card-body .lanch:hover {
+            color: rgb(98, 205, 209);
+        }
+
+        #flask {
+            padding: 46px 62px;
+        }
+
+        #flask img {
+            height: 522px;
+        }
+
+        .icon-box i {
+            font-size: 38px;
+            color: rgb(98, 205, 209);
+        }
+
+        .icon-box h4 {}
+
+        .icon-box p {}
+    </style>
+</head>
+
+<body>
+    <div id="topbar" class="d-flex align-items-center fixed-top">
+        <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+            <div class="align-items-center d-none d-md-flex">
+                <i class="bi bi-clock"></i> Monday - Saturday, 8AM to 10PM
+            </div>
+            <div class="d-flex align-item-center">
+                <i class="bi bi-phone"></i> Call us now +1 4532 35673 24
+            </div>
+        </div>
+    </div>
+    <!-- Navbar Section -->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a href="#" class="navbar-brand"><img src="images/l0ogo.png" class="image-fluid" width="100%" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav" id="navbar-ul">
+                <li class="nav-item">
+                    <a href="" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Doctors</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Departments
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Orthopaedics</a>
+                        <a class="dropdown-item" href="#">Accident & Emergency</a>
+                        <a class="dropdown-item" href="#">Gynaecology & Obstetrics</a>
+                        <a class="dropdown-item" href="#">Paediatrics & Neonatology</a>
+                        <a class="dropdown-item" href="#">Obstetric & Gynecological (OB-GYN)</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Health Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+
+        </div>
+        <div>
+            <a href="#appointment" class="appointment-btn">Make an Appointment</a>
+        </div>
+    </nav>
+    <!-- Carousel wrapper -->
+    <section id="hero">
+        <div class="carousel slide carousel-fade" id="mycarousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#mycarousel" data-slide-to="1"></li>
+                <li data-target="#mycarousel" data-slide-to="2"></li>
+                <li data-target="#mycarousel" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="1500">
+                    <img src="images/slide-1.jpg" class="image-fluid w-100" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First Slide</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                    </div>
+
+                </div>
+                <div class="carousel-item" data-interval="1500">
+                    <img src="images/slide-2.jpg" class="image-fluid w-100" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second Slide</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval="1500">
+                    <img src="images/slide-3.jpg" class="image-fluid w-100" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#mycarousel" class="carousel-control-prev" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a href="#mycarousel" class="carousel-control-next" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </section>
+    <section id="fog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card animate__animated animate__backInUp">
+                        <div class="card-body">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            <h5>Lorem Ipsum</h5>
+                            <p>Lorem ipsum dolor sit consectetur adipisicing elit. amet, consectetur adipisicing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="card animate__animated animate__backInUp">
+                        <div class="card-body">
+                            <i class="fa-solid fa-pills"></i>
+                            <h5>Lorem Ipsum</h5>
+                            <p>Lorem ipsum dolor sit consectetur adipisicing elit. amet, consectetur adipisicing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card animate__animated animate__backInUp">
+                        <div class="card-body">
+                            <i class="fa-solid fa-thermometer"></i>
+                            <h5>Lorem Ipsum</h5>
+                            <p>Lorem ipsum dolor sit consectetur adipisicing elit. amet, consectetur adipisicing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card animate__animated animate__backInUp">
+                        <div class="card-body">
+                            <i class="fa-solid fa-dna"></i>
+                            <h5>Lorem Ipsum</h5>
+                            <p>Lorem ipsum dolor sit consectetur adipisicing elit. amet, consectetur adipisicing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="help">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Is an Emergency?Need Help now.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptas id aut nobis
+                        perspiciatis numquam fugiat vel, est error doloribus maiores ipsa cum deserunt animi delectus et
+                        praesentium amet rerum.</p>
+                    <!-- <button type="button" class="btn-danger"> Make an appointment</button> -->
+                    <a href="#appointment" class="appointment-btn">Make an Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="text">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h3>ABOUT US</h3>
+                    <div id="line"></div>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
+                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
+                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about-us">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/about.jpg" class="image-fluid w-100" alt="">
+                </div>
+                <div class="col-md-6 aboutus">
+                    <h4>Lorem ipsum dolor, sit amet consectetur adipi sit amet consectetur adipi</h4>
+                    <p class="about-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit facilis
+                        facere tempora ad maxime. Possimus, velit? Suscipit soluta deleniti quod.</p>
+                    <ul>
+                        <li class="items"><i class="bi bi-check-circle"></i> Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Minima?</li>
+                        <li class="items"><i class="bi bi-check-circle"></i> Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Minima?</li>
+                        <li><i class="bi bi-check-circle"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eum adipisci, aut sint cupiditate quibusdam voluptates. Exercitationem non assumenda quos
+                            atque, eveniet nam inventore!</li>
+                    </ul>
+                    <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="again-cards">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card format">
+                        <div class="card-body">
+                            <div class="headd"><i class="fa-solid fa-user-doctor"></i>
+                                <h1>85</h1>
+                            </div>
+                            <p class="para"><strong>Doctors</strong>
+                                Lorem ipsum dolor sit amet consectetur.</p>
+                            <a class="lanch" href="#"> Find out more » </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card format">
+                        <div class="card-body">
+                            <div class="headd"><i class="fa-solid fa-hospital"></i>
+                                <h1>26</h1>
+                            </div>
+                            <p class="para"><strong>Departments</strong>
+                                Lorem ipsum dolor sit amet consectetur.</p>
+                            <a class="lanch" href="#"> Find out more » </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card format">
+                        <div class="card-body">
+                            <div class="headd"><i class="fa-solid fa-flask"></i>
+                                <h1>14</h1>
+                            </div>
+                            <p class="para"><strong>Research Labs</strong>
+                                Lorem ipsum dolor sit amet consectetur.</p>
+                            <a class="lanch" href="#"> Find out more » </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="headd"><i class="fa-solid fa-award"></i>
+                                <h1>150</h1>
+                            </div>
+                            <p class="para"><strong>Awards</strong>
+                                Lorem ipsum dolor sit amet consectetur.</p>
+                            <a class="lanch" href="#"> Find out more » </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="flask">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="icon-box mt-5 mt-lg-0">
+                        <i class="fa-solid fa-receipt"></i>
+                        <h4>Est labore ad</h4>
+                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    </div>
+                    <div class="icon-box mt-5 mt-lg-0">
+                        <i class="fa-solid fa-cube"></i>
+                        <h4>Harum esse qui</h4>
+                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    </div>
+                    <div class="icon-box mt-5 mt-lg-0">
+                        <i class="fa-solid fa-images"></i>
+                        <h4>Aut occaecati</h4>
+                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    </div>
+                    <div class="icon-box mt-5 mt-lg-0">
+                        <i class="fa-solid fa-receipt"></i>
+                        <h4>Beatae veritatis</h4>
+                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/features.jpg" class="image-fluid w-100" alt="">
+                </div>
+            </div>
+        </div>
+        <section id="text">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>SERVICES</h3>
+                        <div id="line"></div>
+                        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
+                            Sit
+                            sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit
+                            alias
+                            ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
